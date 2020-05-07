@@ -26,6 +26,13 @@ class LoginScreen extends Component{
     forgotPassword = () =>{
         this.props.navigation.navigate('Validate');
     }
+    
+    sample = () =>{
+        this.props.navigation.navigate('Sample',{
+              itemId: 86,
+              otherParam: 'anything you want here',
+            });
+    }
     onIconPress = () =>{
         let iconName = (this.state.secureTextEntry) ? "eye-off" : "eye";
 
@@ -57,7 +64,7 @@ class LoginScreen extends Component{
                 }
                 else{
                     AsyncStorage.setItem("myKey", res);
-                    this.props.navigation.navigate('Main');
+                    this.props.navigation.navigate(({routeName: 'Main'}));
                 }
                 this.setState({
                     text:"",
@@ -98,6 +105,7 @@ class LoginScreen extends Component{
                     
                         {/* <View style={{marginTop:"10%"}}><Button title ="login" onPress={this.submit} color="green">Login</Button></View> */}
                         <Text onPress={this.forgotPassword} style={{color:"green",marginTop:"10%"}}>Forgot Password?</Text>
+                        <Text onPress={this.sample} style={{color:"green",marginTop:"10%"}}>Videos</Text>
                         <TouchableHighlight
                             style={{
                                 width: 110,
