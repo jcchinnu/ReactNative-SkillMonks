@@ -190,7 +190,7 @@ class MainScreen extends Component{
       }
 
     
-      onBranchChange(value){
+      onBranchChange =value =>{
         for(var i=0;i<this.state.branches.length;i++){
             if(this.state.branches[i].value == value)
             {
