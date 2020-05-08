@@ -24,6 +24,7 @@ class LoginScreen extends Component{
     }
 
     forgotPassword = () =>{
+        console.log("hello");
         this.props.navigation.navigate('Validate');
     }
     
